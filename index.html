@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="data:image/png;base64,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" type="image/png">
+        <title>Radithya Arsa Wibowo</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="vendors/linericon/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="vendors/animate-css/animate.css">
+        <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu" id="mainNav">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.html"><img src="" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="#home">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="#about" >About</a></li> 
+								<li class="nav-item"><a class="nav-link" href="#myself">Myself</a>
+								<li class="nav-item submenu dropdown">
+									<a class="nav-link dropdown-toggle" href="#e&p">Event & Project</a>
+									<!--
+									data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+										<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Project Details</a></li>
+										<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+									</ul>
+									-->
+								</li> 
+								<!--
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+										<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+									</ul>
+								</li>
+								--> 
+								<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+							</ul>
+						</div> 
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+            <div class="banner_inner" style="margin-bottom: -10%; @media (max-width: 800px) {
+				margin-bottom: -30%;
+			}">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="home_left_img">
+								<img src="profile-removebg-preview.png" style="width: 60%; border-radius: 20px;" alt="">
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="banner_content" id="home">
+								<br><br><br><br><br>
+								<h5>This is me</h5>
+								<h2>Radithya Arsa Wibowo</h2>
+								<p>Telecommunication Engineer</p>
+								<p style="margin-top: -40px;" ><img src="https://upload.wikimedia.org/wikipedia/id/4/44/Logo_PENS.png" style="width: 5%; @media (max-width: 800px) { width: 5%;
+									
+								}">  Politeknik Elektronika Negeri Surabaya (PENS)</p>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+        
+        <!--================Welcome Area =================-->
+		
+        <section class="welcome_area p_120">
+        	<div class="container">
+				
+        		<div class="row welcome_inner">
+        			<div class="col-lg-6">
+						
+        				<div class="welcome_text" id="about">
+							<br><br><br>
+        					<h4 style="margin-left: 40px;">About Me</h4>
+        					<p style="margin: 40px; text-align: justify;">My name is Radithya Arsa Wibowo. I was born on July 2nd, 2007, in Kediri, East Java. Since childhood, I have always had a strong sense of curiosity, and over time, it has continued to grow. In today’s modern era, where technology is widespread across the globe, my interest in technology has also started to develop. I am currently studying Telecommunication Engineering at PENS.</p>
+        					<!--<div class="row">
+        						<div class="col-md-4">
+        							<div class="wel_item">
+        								<i class="lnr lnr-database"></i>
+        								<h4>$2.5M</h4>
+        								<p>Total Donation</p>
+        							</div>
+        						</div>
+        						<div class="col-md-4">
+        							<div class="wel_item">
+        								<i class="lnr lnr-book"></i>
+        								<h4>1465</h4>
+        								<p>Total Projects</p>
+        							</div>
+        						</div>
+        						<div class="col-md-4">
+        							<div class="wel_item">
+        								<i class="lnr lnr-users"></i>
+        								<h4>3965</h4>
+        								<p>Total Volunteers</p>
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-6">
+        				<div class="tools_expert">
+        					<h3>Tools Expertness</h3>
+        					<div class="skill_main">
+								<div class="skill_item">
+									<h4>After Effects <span class="counter">85</span>%</h4>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+								<div class="skill_item">
+									<h4>Photoshop <span class="counter">90</span>%</h4>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+								<div class="skill_item">
+									<h4>Illustrator <span class="counter">70</span>%</h4>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+								<div class="skill_item">
+									<h4>Sublime <span class="counter">95</span>%</h4>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+								<div class="skill_item">
+									<h4>Sketch <span class="counter">75</span>%</h4>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+        				</div>-->
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Welcome Area =================-->
+        
+        <!--================Feature Area =================-->
+        <section class="feature_area p_120" style="margin-top: -10%; padding-top: -10%;">
+        	<div class="container" id="myself" style="margin-top: -15%;">
+				<br><br>
+        		<div class="main_title">
+        			<!--<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>-->
+        		</div>
+        		<div class="feature_inner row">
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					<h4>Solving Problem</h4>
+        					<p>I approach every challenge with a mindset to create solutions, not excuses.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					
+        					<h4>Always Ask</h4>
+        					<p>Curiosity drives me to question, explore, and grow beyond limits.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					
+        					<h4>Learn New Things</h4>
+        					<p>I believe continuous learning is the foundation of innovation.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					
+        					<h4>Be Kind</h4>
+        					<p>Kindness is my strength—it builds trust, teamwork, and lasting impact.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					
+        					<h4>Take Initiative</h4>
+        					<p>I don’t wait for opportunities—I create them and take action with purpose.</p>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-6">
+        				<div class="feature_item">
+        					
+        					<h4>Collaborate Well</h4>
+        					<p>I grow stronger by working with others, turning ideas into results together.</p>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Feature Area =================-->
+        
+        <!--================Projects Area =================-->
+        <section class="projects_area p_120" style="margin-top: -10%;">
+        	<div class="container">
+        		<div class="main_title" id="e&p">
+					<br><br><br><br>
+					<h2>Latest Event and Project</h2>
+					<p>Every event is an opportunity to learn, connect, contribute, and create meaningful impact and Every project is a chance to turn ideas into action and deliver real results.<br>*Put the cursor on the image, or tap the image to see*</p>
+				</div>
+        		<div class="projects_fillter">
+					<ul class="filter list">
+						<li class="active" data-filter="*"><a href="#">All Categories</a></li>
+						<li data-filter=".project"><a href="#">Project</a></li>
+						<li data-filter=".academic"><a href="#">Academic</a></li>
+						<li data-filter=".social"><a href="#">Social</a></li>
+					</ul>
+				</div>
+				<div class="projects_inner row">
+					<div class="col-lg-4 col-sm-6 academic">
+						<div class="projects_item">
+							<img class="img-fluid" src="4.jpeg" alt="">
+							<div class="projects_text">
+								<a href="4.jpeg"><h4>EMC Semifinalist</h4></a>
+								<p>Eduversal Mathematics Competition Semifinalist, held by Eduversal Foundation</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 project">
+						<div class="projects_item">
+							<img class="img-fluid" src="WhatsApp Image 2025-07-07 at 21.56.39.jpeg" alt="">
+							<div class="projects_text">
+								<a href="WhatsApp Image 2025-07-07 at 21.56.39.jpeg"><h4>PERO, a Candy-based Carrot</h4></a>
+								<p>With the candy-based carrot, we reinvent tradition—making nutrition-themed snacks exciting and desirable.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 project">
+						<div class="projects_item">
+							<img class="img-fluid" src="Screenshot 2025-07-07 221046.jpg" alt="">
+							<div class="projects_text">
+								<a href="Screenshot 2025-07-07 221046.jpg"><h4>Wedding Web</h4></a>
+								<p>Entrusted with the role of web developer for Praktek Nikah, a practical educational event organized by the school.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 academic">
+						<div class="projects_item">
+							<img class="img-fluid" src="5.jpeg" alt="">
+							<div class="projects_text">
+								<a href="5.jpeg"><h4>ELECTRA 13 Semifinalist</h4></a>
+								<p>ELECTRA 13 is a math, coding, logic, and physics olimpiade held by Depratemen Teknik Elektro ITS</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 social">
+						<div class="projects_item">
+							<img class="img-fluid" src="3.jpeg" alt="">
+							<div class="projects_text">
+								<a href="3.jpeg"><h4>Pradana Putra</h4></a>
+								<p>Become the head of the Scouting Organization 2023-2024</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 social">
+						<div class="projects_item">
+							<img class="img-fluid" src="WhatsApp Image 2025-07-04 at 09.34.46.jpeg" alt="">
+							<div class="projects_text">
+								<a href="WhatsApp Image 2025-07-04 at 09.34.46.jpeg"><h4>Best Implentation of 7 Habits</h4></a>
+								<p>Received an award for demonstrating the best implementation of the 7 Habits</p>
+							</div>
+						</div>
+					</div>
+				</div>
+        	</div>
+        </section>
+        <!--================End Projects Area =================-->
+        
+        <!--================Testimonials Area =================-->
+        <!--<section class="testimonials_area p_120">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>Testimonials</h2>
+        			<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>
+        		</div>
+        		<div class="testi_inner">
+					<div class="testi_slider owl-carousel">
+						<div class="item">
+							<div class="testi_item">
+								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>
+								<h4>Fanny Spencer</h4>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star-half-o"></i></a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testi_item">
+								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>
+								<h4>Fanny Spencer</h4>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star-half-o"></i></a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testi_item">
+								<p>As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel across her face</p>
+								<h4>Fanny Spencer</h4>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star"></i></a>
+								<a href="#"><i class="fa fa-star-half-o"></i></a>
+							</div>
+						</div>
+					</div>
+        		</div>
+        	</div>
+        </section>-->
+        <!--================End Testimonials Area =================-->
+        
+        <!--================Latest Blog Area =================-->
+        <!--<section class="latest_blog_area p_120">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>Latest Posts from Blog</h2>
+        			<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>
+        		</div>
+        		<div class="row latest_blog_inner">
+        			<div class="col-lg-4">
+        				<div class="l_blog_item">
+        					<div class="l_blog_img">
+        						<img class="img-fluid" src="img/blog/home-blog/home-blog-1.jpg" alt="">
+        					</div>
+        					<div class="l_blog_text">
+        						<div class="date">
+        							<a href="#">25 October, 2017  |  By Mark Wiens</a>
+        						</div>
+        						<a href="#"><h4>Addiction When Gambling Becomes A Problem</h4></a>
+        						<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery people scan bar codes with handhelds and workers in the field stay</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4">
+        				<div class="l_blog_item">
+        					<div class="l_blog_img">
+        						<img class="img-fluid" src="img/blog/home-blog/home-blog-2.jpg" alt="">
+        					</div>
+        					<div class="l_blog_text">
+        						<div class="date">
+        							<a href="#">25 October, 2017  |  By Mark Wiens</a>
+        						</div>
+        						<a href="#"><h4>Make Myspace Your Best Designed Space</h4></a>
+        						<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery people scan bar codes with handhelds and workers in the field stay</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4">
+        				<div class="l_blog_item">
+        					<div class="l_blog_img">
+        						<img class="img-fluid" src="img/blog/home-blog/home-blog-3.jpg" alt="">
+        					</div>
+        					<div class="l_blog_text">
+        						<div class="date">
+        							<a href="#">25 October, 2017  |  By Mark Wiens</a>
+        						</div>
+        						<a href="#"><h4>Video Games Playing With Imagination</h4></a>
+        						<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery people scan bar codes with handhelds and workers in the field stay</p>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>-->	
+        <!--================End Latest Blog Area =================-->
+        
+        <!--================Footer Area =================-->
+        <footer class="footer_area p_120" id="contact">
+        	<div class="container">
+        		<div class="row footer_inner">
+        			<div class="col-lg-5 col-sm-6">
+        				<aside class="f_widget ab_widget">
+        					<!--<div class="f_title">
+        						<h3>About Me</h3>
+        					</div>
+        					<p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills,</p>
+        					<p> Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+							</p>
+        					</aside>
+        					</div>
+        			<div class="col-lg-5 col-sm-6">
+        				<aside class="f_widget news_widget">
+        					<div class="f_title">
+        						<h3>Newsletter</h3>
+        					</div>
+        					<p>Stay updated with our latest trends</p>
+        					<div id="mc_embed_signup">
+                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
+                                	<div class="input-group d-flex flex-row">
+                                        <input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                        <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>		
+                                    </div>				
+                                    <div class="mt-10 info"></div>
+                                </form>
+                            </div>
+        				</aside>
+        			</div>
+        			<div class="col-lg-2">
+        				<aside class="f_widget social_widget">
+        					<div class="f_title">
+        						<h3>Follow Me</h3>
+        					</div>
+        					<p>Let us be social</p>
+        					<ul class="list">
+        						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+        						<li><a href="#"><i class="fa fa-behance"></i></a></li>
+        					</ul>
+        				</aside>
+        			</div>
+        		</div>
+        	</div>-->
+
+			<div class="contact" id="contact">
+				<form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+				<div class="contact-left-tittle">
+					<center><h2>Contact Me</h2></center>
+					<hr>
+				</div>
+				<input type="hidden" name="access_key" value="c3e16760-8ad0-4cdc-9653-972f0c694025">
+				<input type="text" name="name" placeholder="Name" class="contact-input" required>
+				<input type="email" name="email" placeholder="Email" class="contact-input" required>
+				<textarea name="message" placeholder="Message" class="contact-textarea" required></textarea>
+				<button class="lop" type="submit">Submit</button>
+				</form>
+			
+            </div>
+
+			<br><br><br>
+
+
+			Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        </footer>
+        <!--================End Footer Area =================-->
+        
+        
+        
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/stellar.js"></script>
+        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="vendors/isotope/isotope-min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <!--gmaps Js-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+        <script src="js/gmaps.min.js"></script>
+        <script src="js/theme.js"></script>
+    </body>
+</html>
